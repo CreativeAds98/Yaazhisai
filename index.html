@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaazhisai Homeo & Siddha Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+    <style>.clip-path-slant { clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%); }</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f7fee7',  /* Pale Olive Tint */
+                            800: '#3f6212', /* Deep Olive */
+                            900: '#1a2e05', /* Dark Moss */
+                        },
+                        gold: {
+                            400: '#eab308', /* Mustard Yellow */
+                            500: '#a16207', /* Ochre */
+                            100: '#fefce8'
+                        },
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            500: '#78716c',
+                            600: '#57534e',
+                            800: '#422006', /* Warm Brown-Black Text */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                        display: ['Cinzel', 'serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+
+    <div id="preloader" class="fixed inset-0 z-[100] bg-stone-50 flex flex-col items-center justify-center transition-all duration-1000 ease-in-out">
+    
+    <div class="relative flex items-center justify-center mb-8">
+        <div class="absolute w-20 h-20 border-2 border-medical-800 rounded-full opacity-20 animate-ping"></div>
+        <div class="absolute w-14 h-14 border-2 border-gold-400 rounded-full opacity-40 animate-ping delay-300"></div>
+        
+        <div class="relative z-10 text-medical-900 text-6xl animate-bounce">
+            <i class="ph-duotone ph-drop"></i>
+        </div>
+    </div>
+
+    <h2 class="font-display text-3xl text-medical-900 tracking-[0.4em] font-bold animate-pulse">YAAZHISAI</h2>
+    <p class="text-gold-500 text-xs font-bold uppercase tracking-widest mt-3 border-t border-gold-400 pt-2">Homeo & Siddha</p>
+
+</div>
+
+    <nav class="bg-medical-900 text-white sticky top-0 z-50 shadow-lg border-b-4 border-gold-400 relative">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-4 group">
+                <img src="https://placehold.co/80x80/eab308/1a2e05?text=Y" alt="Yaazhisai Logo" class="h-14 w-14 rounded-full object-cover border-2 border-gold-400 group-hover:scale-105 transition-transform duration-300 shadow-md">
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-2xl tracking-widest text-gold-100 group-hover:text-gold-400 transition-colors">YAAZHISAI</span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gold-400 font-bold">Homeo & Siddha</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-stone-200 items-center">
+                <li><a href="index.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">About</a></li>
+                <li><a href="services.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Services</a></li>
+                <li><a href="blog.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Blog</a></li>
+                <li><a href="contact.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Contact</a></li>
+                <li><a href="#enquiry" class="bg-gold-400 text-medical-900 px-6 py-3 rounded-sm hover:bg-white transition-all font-bold shadow-md hover:shadow-lg ml-4">Book Visit</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="md:hidden text-gold-400 text-3xl focus:outline-none hover:text-white transition-colors"><i class="ph ph-list"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-medical-900 border-t border-gold-400 shadow-2xl z-40">
+            <ul class="flex flex-col p-6 space-y-4 text-sm font-bold uppercase tracking-widest text-stone-200">
+                <li><a href="index.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Home</a></li>
+                <li><a href="about.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">About</a></li>
+                <li><a href="services.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Services</a></li>
+                <li><a href="blog.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Blog</a></li>
+                <li><a href="contact.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Contact</a></li>
+                <li><a href="#enquiry" class="block bg-gold-400 text-medical-900 text-center px-4 py-3 rounded-sm hover:bg-white transition-all mt-4">Book Visit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section id="hero-slider" class="relative bg-[#f1f5f9] overflow-hidden min-h-[85vh] flex items-center">
+        
+        <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out z-20 flex items-center">
+            <div class="absolute right-0 top-0 w-[45%] h-full bg-medical-900 clip-path-slant hidden md:block"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8 text-center md:text-left pt-10 md:pt-0">
+                        <div class="inline-block border-b border-gold-400 pb-1">
+                            <span class="font-serif italic text-2xl text-medical-800">"Your Health, Our Commitment"</span>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-4xl md:text-6xl text-medical-900 leading-tight mb-2">DR. G. SIVARAMAN</h2>
+                            <div class="flex items-center justify-center md:justify-start gap-3">
+                                <h3 class="font-serif text-xl md:text-2xl text-stone-500 italic">BSMS., Ph.D.</h3>
+                                <span class="h-px w-10 bg-stone-300"></span>
+                            </div>
+                        </div>
+                        <p class="font-sans text-stone-600 leading-loose text-sm md:text-base max-w-lg mx-auto md:mx-0">
+                            Experience the perfect synthesis of traditional wisdom and modern science. Founder & Managing Director of Yaazhisai Medical Centre.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-5 pt-4 justify-center md:justify-start">
+                            <a href="#enquiry" class="bg-medical-900 text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-gold-400 hover:text-medical-900 transition-all duration-500 shadow-xl shadow-medical-900/20 text-center">Book Appointment</a>
+                            <button class="group flex items-center justify-center md:justify-start gap-3 text-medical-900 text-xs font-bold uppercase tracking-[0.2em] hover:text-gold-500 transition-colors">
+                                <span class="w-10 h-10 rounded-full border border-medical-900 flex items-center justify-center group-hover:border-gold-500 group-hover:text-gold-500 transition-all"><i class="ph-fill ph-play text-lg"></i></span> View Profile
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative h-full flex justify-center md:justify-end mt-10 md:mt-0">
+                        <div class="relative w-[350px] md:w-[450px]">
+                            <div class="absolute inset-0 border border-gold-400/30 transform translate-x-4 translate-y-4"></div>
+                            <div class="absolute inset-0 bg-medical-900 transform -translate-x-4 -translate-y-4 opacity-10"></div>
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" class="relative z-10 w-full h-[550px] object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out z-10 flex items-center pointer-events-none">
+            <div class="absolute right-0 top-0 w-[45%] h-full bg-medical-800 clip-path-slant hidden md:block"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8 text-center md:text-left pt-10 md:pt-0">
+                        <div class="inline-block border-b border-gold-400 pb-1">
+                            <span class="font-serif italic text-2xl text-medical-800">"Roots of Antiquity"</span>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-4xl md:text-6xl text-medical-900 leading-tight mb-2">INTEGRATED CARE</h2>
+                            <div class="flex items-center justify-center md:justify-start gap-3">
+                                <h3 class="font-serif text-xl md:text-2xl text-stone-500 italic">Siddha & Homeopathy</h3>
+                                <span class="h-px w-10 bg-stone-300"></span>
+                            </div>
+                        </div>
+                        <p class="font-sans text-stone-600 leading-loose text-sm md:text-base max-w-lg mx-auto md:mx-0">
+                            We treat the root cause, not just the symptoms. Our holistic approach balances the three doshas (Vatham, Pitham, Kapham) for lasting wellness.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-5 pt-4 justify-center md:justify-start">
+                            <a href="#services" class="bg-medical-900 text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-gold-400 hover:text-medical-900 transition-all duration-500 shadow-xl shadow-medical-900/20 text-center">Explore Treatments</a>
+                        </div>
+                    </div>
+                    <div class="relative h-full flex justify-center md:justify-end mt-10 md:mt-0">
+                        <div class="relative w-[350px] md:w-[450px]">
+                            <div class="absolute inset-0 border border-gold-400/30 transform translate-x-4 translate-y-4"></div>
+                            <div class="absolute inset-0 bg-medical-900 transform -translate-x-4 -translate-y-4 opacity-10"></div>
+                            <img src="https://images.unsplash.com/photo-1544367563-12123d895951?q=80&w=2070&auto=format&fit=crop" class="relative z-10 w-full h-[550px] object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out z-10 flex items-center pointer-events-none">
+            <div class="absolute right-0 top-0 w-[45%] h-full bg-stone-800 clip-path-slant hidden md:block"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8 text-center md:text-left pt-10 md:pt-0">
+                        <div class="inline-block border-b border-gold-400 pb-1">
+                            <span class="font-serif italic text-2xl text-medical-800">"Purity in Every Drop"</span>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-4xl md:text-6xl text-medical-900 leading-tight mb-2">NATURAL PHARMACY</h2>
+                            <div class="flex items-center justify-center md:justify-start gap-3">
+                                <h3 class="font-serif text-xl md:text-2xl text-stone-500 italic">Authentic Preparations</h3>
+                                <span class="h-px w-10 bg-stone-300"></span>
+                            </div>
+                        </div>
+                        <p class="font-sans text-stone-600 leading-loose text-sm md:text-base max-w-lg mx-auto md:mx-0">
+                            Our in-house pharmacy ensures the highest quality of traditional medicines, prepared with strict adherence to ancient texts.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-5 pt-4 justify-center md:justify-start">
+                            <a href="#enquiry" class="bg-medical-900 text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-gold-400 hover:text-medical-900 transition-all duration-500 shadow-xl shadow-medical-900/20 text-center">Order Medicine</a>
+                        </div>
+                    </div>
+                    <div class="relative h-full flex justify-center md:justify-end mt-10 md:mt-0">
+                        <div class="relative w-[350px] md:w-[450px]">
+                            <div class="absolute inset-0 border border-gold-400/30 transform translate-x-4 translate-y-4"></div>
+                            <div class="absolute inset-0 bg-medical-900 transform -translate-x-4 -translate-y-4 opacity-10"></div>
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop" class="relative z-10 w-full h-[550px] object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex gap-3 z-30">
+            <button onclick="changeSlide(0)" class="slide-dot w-12 h-1 bg-medical-900 transition-all duration-300"></button>
+            <button onclick="changeSlide(1)" class="slide-dot w-12 h-1 bg-gray-300 transition-all duration-300 hover:bg-medical-800"></button>
+            <button onclick="changeSlide(2)" class="slide-dot w-12 h-1 bg-gray-300 transition-all duration-300 hover:bg-medical-800"></button>
+        </div>
+
+        
+
+    </section>
+
+    <section id="about" class="py-24 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative group">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-100 -z-10"></div>
+                    <div class="absolute top-8 -left-8 bg-white p-4 shadow-lg border-t-2 border-gold-400 hidden md:block"><i class="ph-duotone ph-hands-praying text-4xl text-medical-800"></i></div>
+                </div>
+                <div>
+                    <h4 class="text-gold-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Our Heritage</h4>
+                    <h2 class="font-display text-4xl text-medical-900 mb-6 leading-tight">Bridging Ancient Wisdom <br>& Modern Science</h2>
+                    <p class="font-serif text-xl text-stone-500 italic mb-6">"Healing is not just about medicine, it's about understanding the rhythm of the body."</p>
+                    <p class="text-stone-600 leading-relaxed mb-6 font-light">At Yaazhisai, we believe in a holistic approach to health. Founded by Dr. G. Sivaraman, our centre stands as a beacon of integrated medicine.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm font-bold text-medical-900 uppercase tracking-wider"><i class="ph-fill ph-check-circle text-gold-400 text-lg"></i> 25 Years of Experience</li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-medical-900 uppercase tracking-wider"><i class="ph-fill ph-check-circle text-gold-400 text-lg"></i> Certified Siddha Practitioners</li>
+                    </ul>
+                    <a href="#" class="inline-block border-b border-medical-900 pb-1 text-xs font-bold uppercase tracking-widest hover:text-gold-500 hover:border-gold-500 transition-all">Read Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="siddha" class="py-24 bg-medical-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#eab308 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold-400 font-bold tracking-[0.2em] text-xs uppercase">Ancient Principles</span>
+                <h2 class="font-display text-4xl mt-3 mb-6">The 3 Pillars of Siddha</h2>
+                <p class="text-stone-300 max-w-2xl mx-auto font-serif italic text-lg leading-relaxed">
+                    "According to Siddha, a healthy body is the result of a balanced proportion of the three vital forces (Tridoshas)."
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white/5 border border-white/10 p-8 hover:bg-white/10 hover:border-gold-400/50 transition duration-500 group relative">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gold-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="text-gold-400 text-5xl mb-6"><i class="ph-duotone ph-wind"></i></div>
+                    <h3 class="font-display text-2xl mb-2 text-white group-hover:text-gold-400 transition-colors">Vatham</h3>
+                    <p class="text-xs uppercase tracking-widest text-stone-400 mb-4">Air & Space</p>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        Governs movement, nervous system, and respiration. Imbalance leads to pain, dryness, and anxiety.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 hover:bg-white/10 hover:border-gold-400/50 transition duration-500 group relative">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gold-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="text-gold-400 text-5xl mb-6"><i class="ph-duotone ph-fire"></i></div>
+                    <h3 class="font-display text-2xl mb-2 text-white group-hover:text-gold-400 transition-colors">Pitham</h3>
+                    <p class="text-xs uppercase tracking-widest text-stone-400 mb-4">Fire</p>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        Governs digestion, metabolism, and intellect. Imbalance causes acidity, heat, and inflammation.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 hover:bg-white/10 hover:border-gold-400/50 transition duration-500 group relative">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gold-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="text-gold-400 text-5xl mb-6"><i class="ph-duotone ph-drop"></i></div>
+                    <h3 class="font-display text-2xl mb-2 text-white group-hover:text-gold-400 transition-colors">Kapham</h3>
+                    <p class="text-xs uppercase tracking-widest text-stone-400 mb-4">Earth & Water</p>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        Governs structure, strength, and lubrication. Imbalance leads to cold, congestion, and lethargy.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                 <div class="inline-flex items-center gap-4 bg-medical-800/50 px-8 py-4 rounded-full border border-gold-400/30">
+                     <i class="ph-fill ph-bowl-food text-gold-400 text-2xl"></i>
+                     <p class="font-bold text-stone-200 tracking-wide">
+                         <span class="text-gold-400">"Unave Marunthu"</span> — Food is Medicine
+                     </p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-medical-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <i class="ph-duotone ph-first-aid text-4xl text-gold-400 mb-2"></i>
+                <h2 class="font-display text-3xl md:text-4xl text-medical-900 mb-4">Clinical Excellence</h2>
+                <div class="w-24 h-px bg-stone-300 mx-auto"></div>
+                <p class="text-stone-500 mt-4 font-serif italic text-lg">Comprehensive care for you and your family</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <i class="ph-duotone ph-flower-lotus text-5xl text-medical-800 mb-6 relative z-10"></i>
+                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Siddha Medicine</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Traditional herbal remedies tailored to your body constitution (Vatha, Pitha, Kapha).</p>
+                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+                <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <i class="ph-duotone ph-stethoscope text-5xl text-medical-800 mb-6 relative z-10"></i>
+                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">General Medicine</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Expert diagnosis and treatment for common ailments, fevers, and chronic conditions.</p>
+                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+                 <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <i class="ph-duotone ph-baby text-5xl text-medical-800 mb-6 relative z-10"></i>
+                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Paediatrics</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Specialized care for infants, children, and adolescents with a gentle touch.</p>
+                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+                 <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <i class="ph-duotone ph-heartbeat text-5xl text-medical-800 mb-6 relative z-10"></i>
+                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Diabetology</h3>
+                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Integrated management of diabetes through diet, lifestyle, and medication.</p>
+                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enquiry" class="py-24 bg-white relative border-t border-stone-100">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+                <div class="lg:w-1/3 pt-6">
+                    <h4 class="text-gold-500 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Concierge</h4>
+                    <h2 class="font-display text-4xl text-medical-900 mb-6">Begin Your Journey</h2>
+                    <p class="text-stone-500 mb-10 font-light leading-relaxed">Fill out the enquiry form, and our medical coordinator will reach out to you within 24 hours.</p>
+                    <div class="space-y-8">
+                        <div><p class="text-[10px] uppercase tracking-widest text-gold-500 mb-1 font-bold">Address</p><p class="font-serif text-xl text-medical-900">123, Heritage Road, Anna Nagar,<br>Chennai - 600040</p></div>
+                        <div><p class="text-[10px] uppercase tracking-widest text-gold-500 mb-1 font-bold">Direct Line</p><p class="font-serif text-xl text-medical-900 font-bold">+91 72 9904 5880</p></div>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 w-full bg-medical-50 p-10 md:p-12 rounded-lg shadow-sm border border-stone-200">
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-10 mb-10">
+                            <div class="relative group"><input type="text" id="name" class="peer w-full bg-transparent border-b border-stone-400 py-2 text-stone-800 focus:outline-none focus:border-medical-800 transition-colors placeholder-transparent" placeholder="Name"><label for="name" class="absolute left-0 -top-3 text-xs text-stone-500 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-medical-800 transition-all font-bold uppercase tracking-wider">Full Name</label></div>
+                            <div class="relative group"><input type="tel" id="phone" class="peer w-full bg-transparent border-b border-stone-400 py-2 text-stone-800 focus:outline-none focus:border-medical-800 transition-colors placeholder-transparent" placeholder="Phone"><label for="phone" class="absolute left-0 -top-3 text-xs text-stone-500 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-medical-800 transition-all font-bold uppercase tracking-wider">Phone Number</label></div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-10 mb-10">
+                            <div class="relative group"><select id="service" class="peer w-full bg-transparent border-b border-stone-400 py-2 text-stone-800 focus:outline-none focus:border-medical-800 transition-colors"><option class="bg-white">General Consultation</option><option class="bg-white">Siddha Medicine</option></select><label for="service" class="absolute left-0 -top-3 text-xs text-medical-800 font-bold uppercase tracking-wider">Department</label></div>
+                            <div class="relative group"><input type="date" id="date" class="peer w-full bg-transparent border-b border-stone-400 py-2 text-stone-800 focus:outline-none focus:border-medical-800 transition-colors"><label for="date" class="absolute left-0 -top-3 text-xs text-medical-800 font-bold uppercase tracking-wider">Preferred Date</label></div>
+                        </div>
+                        <div class="relative group mb-12"><textarea id="message" rows="3" class="peer w-full bg-transparent border-b border-stone-400 py-2 text-stone-800 focus:outline-none focus:border-medical-800 transition-colors placeholder-transparent" placeholder="Message"></textarea><label for="message" class="absolute left-0 -top-3 text-xs text-stone-500 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-xs peer-focus:text-medical-800 transition-all font-bold uppercase tracking-wider">Tell us about your concern</label></div>
+                        <button type="button" class="bg-medical-900 text-white px-10 py-4 font-bold uppercase tracking-[0.2em] hover:bg-gold-400 hover:text-medical-900 transition-all duration-300 w-full md:w-auto shadow-lg">Submit Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-medical-900 text-white relative pt-20 pb-10 overflow-hidden border-t-4 border-gold-400">
+    
+    <div class="absolute inset-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 bg-gold-400 rounded-full flex items-center justify-center text-medical-900 font-bold text-xl">Y</div>
+                    <div>
+                        <h2 class="font-display text-2xl font-bold tracking-widest text-white">YAAZHISAI</h2>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-gold-400 font-bold">Medical Centre</p>
+                    </div>
+                </div>
+                <p class="text-stone-400 text-sm leading-relaxed">
+                    Bridging the gap between ancient Siddha wisdom and modern diagnostics. We treat the root cause, ensuring holistic wellness for you and your family.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-medical-900 transition-all duration-300">
+                        <i class="ph-fill ph-facebook-logo text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-medical-900 transition-all duration-300">
+                        <i class="ph-fill ph-instagram-logo text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-medical-900 transition-all duration-300">
+                        <i class="ph-fill ph-youtube-logo text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gold-400 uppercase tracking-widest text-xs mb-8 relative inline-block">
+                    Treatments
+                    <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-400"></span>
+                </h4>
+                <ul class="space-y-4 text-sm text-stone-300">
+                    <li><a href="services.html#siddha" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Siddha Medicine</a></li>
+                    <li><a href="services.html#homeopathy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Homeopathy</a></li>
+                    <li><a href="services.html#naturopathy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Naturopathy</a></li>
+                    <li><a href="services.html#physiotherapy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Physiotherapy</a></li>
+                    <li><a href="services.html#physiotherapy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Varma Therapy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gold-400 uppercase tracking-widest text-xs mb-8 relative inline-block">
+                    Quick Links
+                    <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-400"></span>
+                </h4>
+                <ul class="space-y-4 text-sm text-stone-300">
+                    <li><a href="about.html" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> About Dr. Sivaraman</a></li>
+                    <li><a href="contact.html" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Our Branches</a></li>
+                    <li><a href="index.html#enquiry" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Book Appointment</a></li>
+                    <li><a href="#" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Blog & Health Tips</a></li>
+                    <li><a href="contact.html" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gold-400 uppercase tracking-widest text-xs mb-8 relative inline-block">
+                    Get In Touch
+                    <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-400"></span>
+                </h4>
+                <ul class="space-y-6 text-sm text-stone-300">
+                    <li class="flex items-start gap-3">
+                        <i class="ph-fill ph-map-pin text-gold-400 text-xl mt-1"></i>
+                        <span>
+                            <strong class="text-white block mb-1">Head Office:</strong>
+                            123, Heritage Road, Anna Nagar,<br>Chennai - 600040.
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph-fill ph-phone text-gold-400 text-xl mt-1"></i>
+                        <span>
+                            <strong class="text-white block mb-1">Call Us:</strong>
+                            <a href="tel:+917299045880" class="hover:text-gold-400 transition">+91 72 9904 5880</a>
+                        </span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph-fill ph-envelope text-gold-400 text-xl mt-1"></i>
+                        <span>
+                            <strong class="text-white block mb-1">Email:</strong>
+                            <a href="mailto:care@yaazhisai.com" class="hover:text-gold-400 transition">care@yaazhisai.com</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500">
+            <p>&copy; 2026 Yaazhisai Medical Centre. All Rights Reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-gold-400 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-gold-400 transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/917299045880?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment." 
+   target="_blank" 
+   class="fixed bottom-24 right-8 z-50 flex items-center bg-[#25D366] text-white h-12 rounded-full shadow-2xl overflow-hidden transition-all duration-500 ease-in-out group max-w-[3rem] hover:max-w-[15rem] hover:pr-6">
+    
+    <div class="w-12 h-12 flex items-center justify-center flex-shrink-0 bg-[#25D366] relative z-10">
+        <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+    </div>
+
+    <div class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 flex items-center gap-2">
+        <span class="font-bold text-sm tracking-wide">Book via WhatsApp</span>
+        <i class="ph-bold ph-arrow-right"></i>
+    </div>
+    
+</a>
+
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-gold-400 text-medical-900 w-12 h-12 rounded-full shadow-xl flex items-center justify-center translate-y-20 opacity-0 transition-all duration-500 z-50 hover:bg-white border-2 border-gold-400">
+    <i class="ph-bold ph-arrow-up text-xl"></i>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

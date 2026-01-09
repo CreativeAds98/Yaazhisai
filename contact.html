@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Yaazhisai Homeo & Siddha Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f7fee7',
+                            800: '#3f6212',
+                            900: '#1a2e05',
+                        },
+                        gold: {
+                            400: '#eab308',
+                            500: '#a16207',
+                            100: '#fefce8'
+                        },
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            500: '#78716c',
+                            800: '#422006',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                        display: ['Cinzel', 'serif'], 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Grayscale Map for aesthetic consistency */
+        iframe { filter: grayscale(100%) contrast(1.2) opacity(0.8); transition: filter 0.3s; }
+        iframe:hover { filter: grayscale(0%); }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+
+    <nav class="bg-medical-900 text-white sticky top-0 z-50 shadow-lg border-b-4 border-gold-400 relative">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img src="https://placehold.co/80x80/eab308/1a2e05?text=Y" alt="Yaazhisai Logo" class="h-14 w-14 rounded-full object-cover border-2 border-gold-400 group-hover:scale-105 transition-transform duration-300 shadow-md">
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-2xl tracking-widest text-gold-100 group-hover:text-gold-400 transition-colors">YAAZHISAI</span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gold-400 font-bold">Homeo & Siddha</span>
+                </div>
+            </a>
+            <ul class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-stone-200 items-center">
+                <li><a href="index.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">About</a></li>
+                <li><a href="services.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Services</a></li>
+                <li><a href="blog.html" class="hover:text-gold-400 transition-colors pb-1 border-b-2 border-transparent hover:border-gold-400">Blog</a></li>
+                <li><a href="contact.html" class="text-gold-400 pb-1 border-b-2 border-gold-400">Contact</a></li>
+                <li><a href="index.html#enquiry" class="bg-gold-400 text-medical-900 px-6 py-3 rounded-sm hover:bg-white transition-all font-bold shadow-md hover:shadow-lg ml-4">Book Visit</a></li>
+            </ul>
+            <button id="mobile-menu-btn" class="md:hidden text-gold-400 text-3xl focus:outline-none hover:text-white transition-colors"><i class="ph ph-list"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-medical-900 border-t border-gold-400 shadow-2xl z-40">
+            <ul class="flex flex-col p-6 space-y-4 text-sm font-bold uppercase tracking-widest text-stone-200">
+                <li><a href="index.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Home</a></li>
+                <li><a href="about.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">About</a></li>
+                <li><a href="services.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Services</a></li>
+                <li><a href="blog.html" class="block hover:text-gold-400 py-2 border-b border-medical-800">Blog</a></li>
+                <li><a href="contact.html" class="block text-gold-400 py-2 border-b border-medical-800">Contact</a></li>
+                <li><a href="index.html#enquiry" class="block bg-gold-400 text-medical-900 text-center px-4 py-3 rounded-sm hover:bg-white transition-all mt-4">Book Visit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="relative bg-medical-900 py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="font-display text-4xl md:text-5xl text-white mb-2">Get in Touch</h1>
+            <p class="text-gold-400 text-sm font-bold uppercase tracking-widest">We are here to help you heal</p>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-16">
+        <div class="flex flex-col lg:flex-row gap-12">
+            
+            <div id="main-form" class="w-full lg:w-2/3 bg-white p-8 md:p-12 shadow-xl border-t-4 border-gold-400 rounded-sm">
+                <div class="mb-8">
+                    <h2 class="font-display text-3xl text-medical-900 mb-2">Send us a Message</h2>
+                    <p class="text-stone-500">Fill out the form below for appointments, inquiries, or feedback.</p>
+                </div>
+
+                <form>
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="relative group">
+                            <label class="block text-xs font-bold uppercase tracking-widest text-medical-900 mb-2">Full Name</label>
+                            <input type="text" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-gold-400 transition-colors" placeholder="Enter your name">
+                        </div>
+                        <div class="relative group">
+                            <label class="block text-xs font-bold uppercase tracking-widest text-medical-900 mb-2">Phone Number</label>
+                            <input type="tel" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-gold-400 transition-colors" placeholder="+91">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="relative group">
+                            <label class="block text-xs font-bold uppercase tracking-widest text-medical-900 mb-2">Preferred Branch</label>
+                            <select class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-gold-400 transition-colors text-stone-600">
+                                <option>Anna Nagar (Head Office)</option>
+                                <option>Tambaram</option>
+                                <option>Coimbatore</option>
+                                <option>Madurai</option>
+                            </select>
+                        </div>
+                        <div class="relative group">
+                            <label class="block text-xs font-bold uppercase tracking-widest text-medical-900 mb-2">Service Interest</label>
+                            <select class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-gold-400 transition-colors text-stone-600">
+                                <option>General Consultation</option>
+                                <option>Siddha Therapy</option>
+                                <option>Homeopathy</option>
+                                <option>Physiotherapy</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-xs font-bold uppercase tracking-widest text-medical-900 mb-2">Your Message</label>
+                        <textarea rows="4" class="w-full bg-stone-50 border border-stone-200 p-3 focus:outline-none focus:border-gold-400 transition-colors" placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="button" class="bg-medical-900 text-white px-10 py-4 font-bold uppercase tracking-[0.2em] hover:bg-gold-400 hover:text-medical-900 transition-all duration-300 shadow-lg w-full md:w-auto">
+                        Submit Enquiry
+                    </button>
+                </form>
+            </div>
+
+            <div class="w-full lg:w-1/3 space-y-8">
+                
+                <div class="bg-medical-50 p-8 border border-stone-200">
+                    <h3 class="font-display text-2xl text-medical-900 mb-6">Head Office</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-2 rounded-full text-gold-500 shadow-sm"><i class="ph-fill ph-map-pin text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-medical-900 uppercase">Address</h4>
+                                <p class="text-stone-600 text-sm mt-1">
+                                    123, Heritage Road, Anna Nagar,<br>Chennai - 600040, Tamil Nadu.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-2 rounded-full text-gold-500 shadow-sm"><i class="ph-fill ph-phone text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-medical-900 uppercase">Phone</h4>
+                                <p class="text-stone-600 text-sm mt-1">
+                                    <a href="tel:+917299045880" class="hover:text-gold-500 transition-colors">+91 72 9904 5880</a>
+                                </p>
+                                <p class="text-stone-600 text-sm">
+                                    <a href="tel:+914426262626" class="hover:text-gold-500 transition-colors">+91 44 2626 2626</a> (Landline)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-2 rounded-full text-gold-500 shadow-sm"><i class="ph-fill ph-envelope text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-medical-900 uppercase">Email</h4>
+                                <p class="text-stone-600 text-sm mt-1">
+                                    <a href="mailto:care@yaazhisai.com" class="hover:text-gold-500 transition-colors">care@yaazhisai.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-white p-2 rounded-full text-gold-500 shadow-sm"><i class="ph-fill ph-clock text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-sm text-medical-900 uppercase">Working Hours</h4>
+                                <p class="text-stone-600 text-sm mt-1">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                                <p class="text-stone-600 text-sm">Sunday: 10:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-stone-200 flex justify-center gap-4">
+                        <a href="#" class="w-10 h-10 bg-medical-900 text-white flex items-center justify-center rounded-full hover:bg-gold-400 transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 bg-medical-900 text-white flex items-center justify-center rounded-full hover:bg-gold-400 transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 bg-medical-900 text-white flex items-center justify-center rounded-full hover:bg-gold-400 transition-colors"><i class="ph-fill ph-youtube-logo text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div class="w-full h-64 bg-stone-200 border border-stone-300 shadow-md rounded-sm overflow-hidden relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.002827668636!2d80.2135!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA0JzU3LjciTiA4MMKwMTInNDguNiJF!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="py-20 bg-stone-100 border-t border-stone-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <i class="ph-duotone ph-buildings text-4xl text-gold-400 mb-2"></i>
+                <h2 class="font-display text-3xl text-medical-900">Our Branches</h2>
+                <div class="w-16 h-1 bg-gold-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-gold-400">
+                    <h3 class="font-bold text-xl text-medical-900 mb-2">Chennai (Tambaram)</h3>
+                    <p class="text-xs text-stone-500 mb-4">Branch Code: CHN-02</p>
+                    <p class="text-sm text-stone-600 mb-4 h-16">
+                        45, GST Road, West Tambaram,<br>Chennai - 600045.
+                    </p>
+                    <a href="tel:+919876543210" class="flex items-center gap-2 text-sm font-bold text-medical-800 hover:text-gold-500">
+                        <i class="ph-fill ph-phone"></i> +91 98765 43210
+                    </a>
+                    <button class="mt-4 w-full border border-medical-900 text-medical-900 text-xs font-bold uppercase py-2 hover:bg-medical-900 hover:text-white transition-colors">Get Directions</button>
+                </div>
+
+                <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-gold-400">
+                    <h3 class="font-bold text-xl text-medical-900 mb-2">Coimbatore</h3>
+                    <p class="text-xs text-stone-500 mb-4">Branch Code: CBE-01</p>
+                    <p class="text-sm text-stone-600 mb-4 h-16">
+                        88, Cross Cut Road, Gandhipuram,<br>Coimbatore - 641012.
+                    </p>
+                    <a href="tel:+919876543211" class="flex items-center gap-2 text-sm font-bold text-medical-800 hover:text-gold-500">
+                        <i class="ph-fill ph-phone"></i> +91 98765 43211
+                    </a>
+                    <button class="mt-4 w-full border border-medical-900 text-medical-900 text-xs font-bold uppercase py-2 hover:bg-medical-900 hover:text-white transition-colors">Get Directions</button>
+                </div>
+
+                <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-gold-400">
+                    <h3 class="font-bold text-xl text-medical-900 mb-2">Madurai</h3>
+                    <p class="text-xs text-stone-500 mb-4">Branch Code: MDU-01</p>
+                    <p class="text-sm text-stone-600 mb-4 h-16">
+                        12, Bypass Road, Near Aparna Towers,<br>Madurai - 625010.
+                    </p>
+                    <a href="tel:+919876543212" class="flex items-center gap-2 text-sm font-bold text-medical-800 hover:text-gold-500">
+                        <i class="ph-fill ph-phone"></i> +91 98765 43212
+                    </a>
+                    <button class="mt-4 w-full border border-medical-900 text-medical-900 text-xs font-bold uppercase py-2 hover:bg-medical-900 hover:text-white transition-colors">Get Directions</button>
+                </div>
+
+                <div class="bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border-t-4 border-transparent hover:border-gold-400">
+                    <h3 class="font-bold text-xl text-medical-900 mb-2">Trichy</h3>
+                    <p class="text-xs text-stone-500 mb-4">Branch Code: TRC-01</p>
+                    <p class="text-sm text-stone-600 mb-4 h-16">
+                        5, Thillai Nagar Main Road,<br>Trichy - 620018.
+                    </p>
+                    <a href="tel:+919876543213" class="flex items-center gap-2 text-sm font-bold text-medical-800 hover:text-gold-500">
+                        <i class="ph-fill ph-phone"></i> +91 98765 43213
+                    </a>
+                    <button class="mt-4 w-full border border-medical-900 text-medical-900 text-xs font-bold uppercase py-2 hover:bg-medical-900 hover:text-white transition-colors">Get Directions</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <footer class="bg-medical-900 text-white relative pt-20 pb-10 overflow-hidden border-t-4 border-gold-400">
+            
+            <div class="absolute inset-0 opacity-5" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3">
+                            <div class="h-10 w-10 bg-gold-400 rounded-full flex items-center justify-center text-medical-900 font-bold text-xl">Y</div>
+                            <div>
+                                <h2 class="font-display text-2xl font-bold tracking-widest text-white">YAAZHISAI</h2>
+                                <p class="text-[10px] uppercase tracking-[0.3em] text-gold-400 font-bold">Medical Centre</p>
+                            </div>
+                        </div>
+                        <p class="text-stone-400 text-sm leading-relaxed">
+                            Bridging the gap between ancient Siddha wisdom and modern diagnostics. We treat the root cause, ensuring holistic wellness for you and your family.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-medical-900 transition-all duration-300">
+                                <i class="ph-fill ph-facebook-logo text-lg"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-medical-900 transition-all duration-300">
+                                <i class="ph-fill ph-instagram-logo text-lg"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gold-400 hover:bg-gold-400 hover:text-medical-900 transition-all duration-300">
+                                <i class="ph-fill ph-youtube-logo text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gold-400 uppercase tracking-widest text-xs mb-8 relative inline-block">
+                            Treatments
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-400"></span>
+                        </h4>
+                        <ul class="space-y-4 text-sm text-stone-300">
+                            <li><a href="services.html#siddha" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Siddha Medicine</a></li>
+                            <li><a href="services.html#homeopathy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Homeopathy</a></li>
+                            <li><a href="services.html#naturopathy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Naturopathy</a></li>
+                            <li><a href="services.html#physiotherapy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Physiotherapy</a></li>
+                            <li><a href="services.html#physiotherapy" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Varma Therapy</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gold-400 uppercase tracking-widest text-xs mb-8 relative inline-block">
+                            Quick Links
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-400"></span>
+                        </h4>
+                        <ul class="space-y-4 text-sm text-stone-300">
+                            <li><a href="about.html" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> About Dr. Sivaraman</a></li>
+                            <li><a href="contact.html" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Our Branches</a></li>
+                            <li><a href="index.html#enquiry" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Book Appointment</a></li>
+                            <li><a href="#" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Blog & Health Tips</a></li>
+                            <li><a href="contact.html" class="hover:text-gold-400 transition-colors flex items-center gap-2"><i class="ph-fill ph-caret-right text-gold-500/50"></i> Contact Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gold-400 uppercase tracking-widest text-xs mb-8 relative inline-block">
+                            Get In Touch
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-gold-400"></span>
+                        </h4>
+                        <ul class="space-y-6 text-sm text-stone-300">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-map-pin text-gold-400 text-xl mt-1"></i>
+                                <span>
+                                    <strong class="text-white block mb-1">Head Office:</strong>
+                                    123, Heritage Road, Anna Nagar,<br>Chennai - 600040.
+                                </span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-phone text-gold-400 text-xl mt-1"></i>
+                                <span>
+                                    <strong class="text-white block mb-1">Call Us:</strong>
+                                    <a href="tel:+917299045880" class="hover:text-gold-400 transition">+91 72 9904 5880</a>
+                                </span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-fill ph-envelope text-gold-400 text-xl mt-1"></i>
+                                <span>
+                                    <strong class="text-white block mb-1">Email:</strong>
+                                    <a href="mailto:care@yaazhisai.com" class="hover:text-gold-400 transition">care@yaazhisai.com</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500">
+                    <p>&copy; 2026 Yaazhisai Medical Centre. All Rights Reserved.</p>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-gold-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-gold-400 transition-colors">Terms of Service</a>
+                        <a href="#" class="hover:text-gold-400 transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/917299045880?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment." 
+            target="_blank" 
+            class="fixed bottom-24 right-8 z-50 flex items-center bg-[#25D366] text-white h-12 rounded-full shadow-2xl overflow-hidden transition-all duration-500 ease-in-out group max-w-[3rem] hover:max-w-[15rem] hover:pr-6">
+                
+                <div class="w-12 h-12 flex items-center justify-center flex-shrink-0 bg-[#25D366] relative z-10">
+                    <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+                </div>
+
+                <div class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 flex items-center gap-2">
+                    <span class="font-bold text-sm tracking-wide">Book via WhatsApp</span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </div>
+    
+        </a>
+
+    <button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-gold-400 text-medical-900 w-12 h-12 rounded-full shadow-xl flex items-center justify-center translate-y-20 opacity-0 transition-all duration-500 z-50 hover:bg-white border-2 border-gold-400">
+      <i class="ph-bold ph-arrow-up text-xl"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
