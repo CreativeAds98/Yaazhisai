@@ -145,3 +145,31 @@ window.addEventListener('load', () => {
         }, 1500);
     }
 });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const docSection = document.getElementById('doctors');
+        
+        // Setup Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cards = entry.target.querySelectorAll('.doc-card');
+                    
+                    // Trigger animations one by one
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.remove('opacity-0', 'translate-y-10');
+                        }, index * 100); // 100ms delay for each card
+                    });
+                    
+                    // Stop observing once animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 }); // Trigger when 20% of section is visible
+
+        if(docSection) {
+            observer.observe(docSection);
+        }
+    });
