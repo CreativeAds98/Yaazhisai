@@ -173,3 +173,89 @@ window.addEventListener('load', () => {
             observer.observe(docSection);
         }
     });
+
+        // Data for the popups
+    const serviceDetails = {
+        'siddha': {
+            title: "Siddha Medicine",
+            desc: "Our Siddha approach focuses on the 'Mukkuttram' (Three humors). We use specific herbal formulations to restore balance to your Vatha, Pitha, and Kapha doshas.",
+            treatments: [
+                "Nadi Pariksha (Pulse Diagnosis)",
+                "Varma Therapy for pain relief",
+                "Thokkanam (Physical manipulation)",
+                "Customized herbal diet plans"
+            ]
+        },
+        'general': {
+            title: "General Medicine",
+            desc: "Primary care for acute and chronic illnesses. We focus on early diagnosis and holistic management to prevent complications.",
+            treatments: [
+                "Viral Fever & Infection management",
+                "Thyroid disorders",
+                "Hypertension (Blood Pressure) care",
+                "Respiratory issues & Asthma"
+            ]
+        },
+        'paediatrics': {
+            title: "Paediatrics",
+            desc: "Gentle, non-invasive care for your little ones. We focus on boosting immunity naturally and tracking developmental milestones.",
+            treatments: [
+                "Immunity boosting protocols",
+                "Growth & Development monitoring",
+                "Pediatric nutrition counseling",
+                "Common cold & allergy management"
+            ]
+        },
+        'diabetology': {
+            title: "Diabetology",
+            desc: "Comprehensive diabetes care that goes beyond just insulin. We combine modern diagnostics with lifestyle modifications.",
+            treatments: [
+                "HbA1c & Sugar level monitoring",
+                "Diabetic foot care",
+                "Dietary chart customization",
+                "Prevention of diabetic neuropathy"
+            ]
+        }
+    };
+
+    function openModal(serviceKey) {
+        const modal = document.getElementById('serviceModal');
+        const data = serviceDetails[serviceKey];
+        const listContainer = document.getElementById('modalList');
+
+        // Populate Data
+        document.getElementById('modalTitle').innerText = data.title;
+        document.getElementById('modalDesc').innerText = data.desc;
+        
+        // Clear and Populate List
+        listContainer.innerHTML = ''; 
+        data.treatments.forEach(item => {
+            const li = document.createElement('li');
+            li.className = "flex items-center gap-2";
+            li.innerHTML = `<i class="ph-fill ph-check-circle text-gold-500"></i> ${item}`;
+            listContainer.appendChild(li);
+        });
+
+        // Show Modal
+        modal.classList.remove('hidden');
+        // Small timeout to allow display:block to apply before opacity transition
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div[class*="transform"]').classList.remove('scale-95', 'opacity-0');
+            modal.querySelector('div[class*="transform"]').classList.add('scale-100', 'opacity-100');
+        }, 10);
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('serviceModal');
+        
+        // Add fade out classes
+        modal.classList.add('opacity-0');
+        modal.querySelector('div[class*="transform"]').classList.remove('scale-100', 'opacity-100');
+        modal.querySelector('div[class*="transform"]').classList.add('scale-95', 'opacity-0');
+
+        // Wait for transition to finish before hiding
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }

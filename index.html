@@ -290,46 +290,91 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-medical-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <i class="ph-duotone ph-first-aid text-4xl text-gold-400 mb-2"></i>
-                <h2 class="font-display text-3xl md:text-4xl text-medical-900 mb-4">Clinical Excellence</h2>
-                <div class="w-24 h-px bg-stone-300 mx-auto"></div>
-                <p class="text-stone-500 mt-4 font-serif italic text-lg">Comprehensive care for you and your family</p>
+<section id="services" class="py-24 bg-medical-50 relative">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <i class="ph-duotone ph-first-aid text-4xl text-gold-400 mb-2"></i>
+            <h2 class="font-display text-3xl md:text-4xl text-medical-900 mb-4">Clinical Excellence</h2>
+            <div class="w-24 h-px bg-stone-300 mx-auto"></div>
+            <p class="text-stone-500 mt-4 font-serif italic text-lg">Comprehensive care for you and your family</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div onclick="openModal('siddha')" class="cursor-pointer bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden rounded-sm">
+                <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                <i class="ph-duotone ph-flower-lotus text-5xl text-medical-800 mb-6 relative z-10"></i>
+                <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Siddha Medicine</h3>
+                <p class="text-sm text-stone-500 leading-relaxed relative z-10">Traditional herbal remedies tailored to your body constitution (Vatha, Pitha, Kapha).</p>
+                <span class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Read Details <i class="ph-bold ph-arrow-right"></i></span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
-                    <i class="ph-duotone ph-flower-lotus text-5xl text-medical-800 mb-6 relative z-10"></i>
-                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Siddha Medicine</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Traditional herbal remedies tailored to your body constitution (Vatha, Pitha, Kapha).</p>
-                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
-                </div>
-                <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
-                    <i class="ph-duotone ph-stethoscope text-5xl text-medical-800 mb-6 relative z-10"></i>
-                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">General Medicine</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Expert diagnosis and treatment for common ailments, fevers, and chronic conditions.</p>
-                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
-                </div>
-                 <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
-                    <i class="ph-duotone ph-baby text-5xl text-medical-800 mb-6 relative z-10"></i>
-                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Paediatrics</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Specialized care for infants, children, and adolescents with a gentle touch.</p>
-                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
-                </div>
-                 <div class="bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
-                    <i class="ph-duotone ph-heartbeat text-5xl text-medical-800 mb-6 relative z-10"></i>
-                    <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Diabetology</h3>
-                    <p class="text-sm text-stone-500 leading-relaxed relative z-10">Integrated management of diabetes through diet, lifestyle, and medication.</p>
-                    <a href="#" class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Learn More <i class="ph-bold ph-arrow-right"></i></a>
+
+            <div onclick="openModal('general')" class="cursor-pointer bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden rounded-sm">
+                <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                <i class="ph-duotone ph-stethoscope text-5xl text-medical-800 mb-6 relative z-10"></i>
+                <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">General Medicine</h3>
+                <p class="text-sm text-stone-500 leading-relaxed relative z-10">Expert diagnosis and treatment for common ailments, fevers, and chronic conditions.</p>
+                <span class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Read Details <i class="ph-bold ph-arrow-right"></i></span>
+            </div>
+
+            <div onclick="openModal('paediatrics')" class="cursor-pointer bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden rounded-sm">
+                <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                <i class="ph-duotone ph-baby text-5xl text-medical-800 mb-6 relative z-10"></i>
+                <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Paediatrics</h3>
+                <p class="text-sm text-stone-500 leading-relaxed relative z-10">Specialized care for infants, children, and adolescents with a gentle touch.</p>
+                <span class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Read Details <i class="ph-bold ph-arrow-right"></i></span>
+            </div>
+
+            <div onclick="openModal('diabetology')" class="cursor-pointer bg-white p-8 group hover:-translate-y-2 transition-all duration-300 border border-stone-100 hover:border-gold-400 shadow-sm hover:shadow-xl relative overflow-hidden rounded-sm">
+                <div class="absolute top-0 right-0 bg-stone-50 w-24 h-24 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                <i class="ph-duotone ph-heartbeat text-5xl text-medical-800 mb-6 relative z-10"></i>
+                <h3 class="font-display text-xl text-medical-900 mb-2 relative z-10">Diabetology</h3>
+                <p class="text-sm text-stone-500 leading-relaxed relative z-10">Integrated management of diabetes through diet, lifestyle, and medication.</p>
+                <span class="inline-flex items-center gap-2 mt-6 text-[10px] font-bold uppercase tracking-widest text-gold-500 group-hover:text-medical-900 transition-colors relative z-10">Read Details <i class="ph-bold ph-arrow-right"></i></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="serviceModal" class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-300" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-medical-900/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg border-t-4 border-gold-400">
+                    
+                    <button onclick="closeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-red-500 transition-colors">
+                        <i class="ph-bold ph-x text-2xl"></i>
+                    </button>
+
+                    <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+                                <h3 class="text-2xl font-display font-semibold leading-6 text-medical-900 mb-1" id="modalTitle">Service Name</h3>
+                                <p class="text-gold-500 text-xs font-bold uppercase tracking-widest mb-4">Treatment Details</p>
+                                
+                                <div class="mt-2">
+                                    <p class="text-sm text-stone-600 mb-4 font-serif italic" id="modalDesc">Description goes here.</p>
+                                    
+                                    <div class="bg-stone-50 p-4 rounded border border-stone-100">
+                                        <h4 class="text-xs font-bold text-medical-900 uppercase mb-3">Key Treatments:</h4>
+                                        <ul class="text-sm text-stone-600 space-y-2" id="modalList">
+                                            </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-stone-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <a href="#enquiry" onclick="closeModal()" class="inline-flex w-full justify-center rounded-sm bg-medical-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gold-500 transition-colors sm:ml-3 sm:w-auto">Book Consultation</a>
+                        <button type="button" class="mt-3 inline-flex w-full justify-center rounded-sm bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" onclick="closeModal()">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 <section id="doctors" class="py-24 bg-stone-100 relative overflow-hidden">
@@ -397,7 +442,7 @@
 
             <div class="doc-card opacity-0 translate-y-10 transition-all duration-700 ease-out bg-white rounded-lg shadow-sm hover:shadow-xl border-b-4 border-transparent hover:border-gold-400 overflow-hidden group">
                 <div class="h-48 overflow-hidden">
-                    <img src="assets/doctors/Dr.Anil-(Bangalore).jpeg" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" alt="Dr. Anil">
+                    <img src="assets/doctors/Dr.Anil-(Bangalore).jpeg" class="w-full h-full object-relative group-hover:scale-110 transition-transform duration-500" alt="Dr. Anil">
                 </div>
                 <div class="p-4 text-center">
                     <h3 class="font-display text-sm font-bold text-medical-900">Dr.Anil</h3>
@@ -407,7 +452,7 @@
 
             <div class="doc-card opacity-0 translate-y-10 transition-all duration-700 ease-out bg-white rounded-lg shadow-sm hover:shadow-xl border-b-4 border-transparent hover:border-gold-400 overflow-hidden group">
                 <div class="h-48 overflow-hidden">
-                    <img src="assets/doctors/Dr.M.Jeya-Balaaji-(Bangalore).jpeg" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" alt="Dr. M. Jeya-Balaaji">
+                    <img src="assets/doctors/Dr.M.Jeya-Balaaji-(Bangalore).jpeg" class="w-full h-full object-relative group-hover:scale-110 transition-transform duration-500" alt="Dr. M. Jeya-Balaaji">
                 </div>
                 <div class="p-4 text-center">
                     <h3 class="font-display text-sm font-bold text-medical-900">Dr.M.Jeya-Balaaji</h3>
@@ -729,5 +774,8 @@
     </button>
     
     <script src="script.js"></script>
+    <script>
+
+</script>
 </body>
 </html>
